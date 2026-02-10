@@ -6,8 +6,11 @@ class Loopmux < Formula
   license "MIT"
 
   depends_on "rust" => :build
+  depends_on "llvm" => :build
 
   def install
+    llvm = Formula["llvm"]
+    ENV["PATH"] = "#{llvm.opt_bin}:#{ENV["PATH"]}"
     system "cargo", "install", *std_cargo_args
   end
 
