@@ -1,8 +1,8 @@
 class Loopmux < Formula
   desc "Loop prompts into tmux panes with triggers and delays"
   homepage "https://github.com/dmoliveira/loopmux"
-  url "https://github.com/dmoliveira/loopmux/archive/refs/tags/v0.1.10.tar.gz"
-  sha256 "edd9a10f47068cbac142972a072e51f244902a97df22a63f59e5cd479773bce2"
+  url "https://github.com/dmoliveira/loopmux/archive/refs/tags/v0.1.11.tar.gz"
+  sha256 "f1fcc3c684bd8ab8d789881b909c377c4931f62faabffa47ec1743ec31d2c5e7"
   license "MIT"
 
   depends_on "rust" => :build
