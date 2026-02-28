@@ -1,8 +1,8 @@
 class OpencodeTmuxMem < Formula
   desc "Inspect OpenCode memory and map PIDs to tmux panes"
   homepage "https://github.com/dmoliveira/opencode-tmux-mem"
-  url "https://github.com/dmoliveira/opencode-tmux-mem/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "437ee5d9bc9d79063ad1334aef31474a41814dcfb43a14d524a5e2a87e57b213"
+  url "https://github.com/dmoliveira/opencode-tmux-mem/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "dbe7b26e91373a3f614274a556e39ddb5d78893171c3ac663c265b8e80daaf88"
   license "MIT"
 
   depends_on "rust" => :build
