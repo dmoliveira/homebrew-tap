@@ -2,6 +2,8 @@
 
 If this tap saves you time, you can support its maintenance and ongoing updates.
 
+Quick donate link: **[Support Homebrew Tap](https://buy.stripe.com/8x200i8bSgVe3Vl3g8bfO00)**
+
 ## Donation Options
 
 - GitHub Sponsors: `https://github.com/sponsors/dmoliveira`

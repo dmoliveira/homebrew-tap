@@ -8,6 +8,7 @@
 <!-- markdownlint-enable MD033 -->
 
 [![Docs Quality Checks](https://github.com/dmoliveira/homebrew-tap/actions/workflows/docs-links.yml/badge.svg)](https://github.com/dmoliveira/homebrew-tap/actions/workflows/docs-links.yml)
+[![Release Highlights Refresh](https://github.com/dmoliveira/homebrew-tap/actions/workflows/release-highlights-refresh.yml/badge.svg)](https://github.com/dmoliveira/homebrew-tap/actions/workflows/release-highlights-refresh.yml)
 [![Formula Audit](https://github.com/dmoliveira/homebrew-tap/actions/workflows/formula-audit.yml/badge.svg)](https://github.com/dmoliveira/homebrew-tap/actions/workflows/formula-audit.yml)
 [![Hero Asset Guard](https://github.com/dmoliveira/homebrew-tap/actions/workflows/asset-guard.yml/badge.svg)](https://github.com/dmoliveira/homebrew-tap/actions/workflows/asset-guard.yml)
 [![Docs Site Deploy](https://github.com/dmoliveira/homebrew-tap/actions/workflows/pages.yml/badge.svg)](https://github.com/dmoliveira/homebrew-tap/actions/workflows/pages.yml)
@@ -94,6 +95,10 @@ A weekly workflow also refreshes this block and opens a PR when updates are dete
 <!-- sk-release-highlights:end -->
 
 ## Support And Donations 💛
+
+If this tap saves you time, support maintenance here:
+
+- **[Donate via Stripe](https://buy.stripe.com/8x200i8bSgVe3Vl3g8bfO00)**
 
 - Support details: `docs/support-the-project.md`
 - GitHub Sponsors: `https://github.com/sponsors/dmoliveira`
