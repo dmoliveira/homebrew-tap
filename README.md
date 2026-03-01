@@ -31,6 +31,7 @@ are not in Homebrew core.
 - Both checks run on pull requests, pushes to `main`, and weekly schedule.
 - `Generate README Hero`: manual trigger plus monthly scheduled refresh attempt.
 - Local one-command check: `make validate` (or `make ci`).
+- Full maintenance guide: `docs/maintenance.md`.
 
 ## What Is In This Tap? 🧰
 
