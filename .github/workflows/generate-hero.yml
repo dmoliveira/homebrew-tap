@@ -1,0 +1,31 @@
+name: Generate README Hero
+
+on:
+  workflow_dispatch:
+    inputs:
+      image_model:
+        description: "OpenAI image model"
+        required: false
+        default: "gpt-image-1.5"
+
+permissions:
+  contents: read
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate hero image
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_IMAGE_MODEL: ${{ inputs.image_model }}
+        run: ./scripts/generate-hero-gpt-image.sh
+
+      - name: Upload hero image artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: homebrew-tap-hero
+          path: docs/assets/homebrew-tap-hero.webp
