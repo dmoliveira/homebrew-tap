@@ -34,6 +34,14 @@ If this tap saves you time, please support maintenance in a visible, direct way:
 - Stripe: [Support Homebrew Tap](https://buy.stripe.com/8x200i8bSgVe3Vl3g8bfO00)
 - GitHub Sponsors: [Sponsor @dmoliveira](https://github.com/sponsors/dmoliveira)
 
+## AI/ML + Software Security Tips 🔐
+
+- Use separate API keys for local dev, CI, and production agents.
+- Never place secrets directly in prompts, notebooks, or exported traces.
+- Rotate credentials on a schedule and after incident suspicion.
+- Keep formula and script logs free of tokens, keys, and personal data.
+- Validate external links and release assets before publishing docs pages.
+
 ## Maintenance Checks 🛡️
 
 - `Docs Quality Checks`: validates Markdown links in README and docs.
@@ -68,6 +76,7 @@ brew install opencode-tmux-mem
 - GitHub Wiki home: `https://github.com/dmoliveira/homebrew-tap/wiki`
 - GitHub Pages docs: `https://dmoliveira.github.io/homebrew-tap/`
 - Wiki-ready snippet: `docs/wiki-home.md`
+- sk security guide: `https://dmoliveira.github.io/sk/security-for-ai-agents`
 
 Generate a GPT Image 1.5 hero image (optional):
 
@@ -109,8 +118,7 @@ If this tap saves you time, support maintenance here:
 - **[Donate via Stripe](https://buy.stripe.com/8x200i8bSgVe3Vl3g8bfO00)**
 
 - Support details: `docs/support-the-project.md`
-- GitHub Sponsors: `https://github.com/sponsors/dmoliveira`
-- Donate now via Stripe: [Support Homebrew Tap](https://buy.stripe.com/8x200i8bSgVe3Vl3g8bfO00)
+- GitHub Sponsors: [Sponsor @dmoliveira](https://github.com/sponsors/dmoliveira)
 
 ## What Would Make This Page Better? ✨
 
