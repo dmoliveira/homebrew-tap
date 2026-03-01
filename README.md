@@ -30,6 +30,7 @@ are not in Homebrew core.
 - `Hero Asset Guard`: validates hero image assets and README picture fallback block.
 - Both checks run on pull requests, pushes to `main`, and weekly schedule.
 - `Generate README Hero`: manual trigger plus monthly scheduled refresh attempt.
+- Local one-command check: `make validate` (or `make ci`).
 
 ## What Is In This Tap? 🧰
 
