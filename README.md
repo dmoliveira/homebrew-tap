@@ -1,6 +1,11 @@
 # Homebrew Tap 🍺
 
-![Homebrew Tap Hero](docs/assets/homebrew-tap-hero.svg)
+<!-- markdownlint-disable MD033 -->
+<picture>
+  <source srcset="docs/assets/homebrew-tap-hero.webp" type="image/webp">
+  <img src="docs/assets/homebrew-tap-hero.svg" alt="Homebrew Tap Hero">
+</picture>
+<!-- markdownlint-enable MD033 -->
 
 [![Docs Quality Checks](https://github.com/dmoliveira/homebrew-tap/actions/workflows/docs-links.yml/badge.svg)](https://github.com/dmoliveira/homebrew-tap/actions/workflows/docs-links.yml)
 [![Docs Site Deploy](https://github.com/dmoliveira/homebrew-tap/actions/workflows/pages.yml/badge.svg)](https://github.com/dmoliveira/homebrew-tap/actions/workflows/pages.yml)
@@ -50,6 +55,7 @@ Generate a GPT Image 1.5 hero image (optional):
 ```
 
 This writes `docs/assets/homebrew-tap-hero.webp` and keeps the SVG as fallback.
+When the WebP exists, this README automatically prefers it.
 
 ## Support And Donations 💛
 
