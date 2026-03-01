@@ -74,7 +74,7 @@ Setup path: `Settings -> Secrets and variables -> Actions -> New repository secr
 Refresh this section with:
 
 ```bash
-./scripts/update-sk-release-highlights.sh
+make release-highlights
 ```
 
 <!-- sk-release-highlights:start -->
