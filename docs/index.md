@@ -1,13 +1,23 @@
-# Homebrew Tap Docs
+# Homebrew Tap Docs 🍺
 
-Welcome to the docs site for `dmoliveira/tap`.
+Welcome to the GitHub Pages docs for `dmoliveira/tap`.
 
-## Start Here
+## Support this tap now 💛
 
-- Install guide: `../README.md`
+If this tap helps your daily workflow, support continued updates:
+
+- Donate now via Stripe: [Support Homebrew Tap](https://buy.stripe.com/8x200i8bSgVe3Vl3g8bfO00)
+- Sponsor on GitHub: [@dmoliveira](https://github.com/sponsors/dmoliveira)
+
+## Quick Links
+
+- Main README: `../README.md`
 - Formula directory: `../Formula/`
+- Maintenance guide: `maintenance.md`
 - Wiki starter content: `wiki-home.md`
-- Support and donations: `support-the-project.md`
+- Support page: `support-the-project.md`
+- GitHub wiki: `https://github.com/dmoliveira/homebrew-tap/wiki`
+- Latest releases: `https://github.com/dmoliveira/homebrew-tap/releases`
 
 ## Install
 
@@ -16,12 +26,19 @@ brew tap dmoliveira/tap
 brew install sk
 ```
 
-## Available Formulae
+## Formula Catalog
 
-- `sk`
-- `loopmux`
-- `opencode-tmux-mem`
+- `sk`: macOS Keychain CLI
+- `loopmux`: terminal workflow helper
+- `opencode-tmux-mem`: tmux memory helper
 
-## Notes
+## Maintainer Actions
 
-This site is intentionally minimal and designed for GitHub Pages.
+- Refresh release highlights: `make release-highlights`
+- Run local checks: `make validate`
+- Trigger docs deployment: `https://github.com/dmoliveira/homebrew-tap/actions/workflows/pages.yml`
+
+## Support
+
+- Donate now via Stripe: [Support Homebrew Tap](https://buy.stripe.com/8x200i8bSgVe3Vl3g8bfO00)
+- Sponsor on GitHub: [@dmoliveira](https://github.com/sponsors/dmoliveira)

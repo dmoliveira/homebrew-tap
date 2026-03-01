@@ -10,6 +10,7 @@
 [![Docs Quality Checks](https://github.com/dmoliveira/homebrew-tap/actions/workflows/docs-links.yml/badge.svg)](https://github.com/dmoliveira/homebrew-tap/actions/workflows/docs-links.yml)
 [![Release Highlights Refresh](https://github.com/dmoliveira/homebrew-tap/actions/workflows/release-highlights-refresh.yml/badge.svg)](https://github.com/dmoliveira/homebrew-tap/actions/workflows/release-highlights-refresh.yml)
 [![Formula Audit](https://github.com/dmoliveira/homebrew-tap/actions/workflows/formula-audit.yml/badge.svg)](https://github.com/dmoliveira/homebrew-tap/actions/workflows/formula-audit.yml)
+[![Release Highlights Refresh](https://github.com/dmoliveira/homebrew-tap/actions/workflows/release-highlights-refresh.yml/badge.svg)](https://github.com/dmoliveira/homebrew-tap/actions/workflows/release-highlights-refresh.yml)
 [![Hero Asset Guard](https://github.com/dmoliveira/homebrew-tap/actions/workflows/asset-guard.yml/badge.svg)](https://github.com/dmoliveira/homebrew-tap/actions/workflows/asset-guard.yml)
 [![Docs Site Deploy](https://github.com/dmoliveira/homebrew-tap/actions/workflows/pages.yml/badge.svg)](https://github.com/dmoliveira/homebrew-tap/actions/workflows/pages.yml)
 [![Docs Site](https://img.shields.io/badge/docs-live_site-2ea44f)](https://dmoliveira.github.io/homebrew-tap/)
@@ -25,6 +26,13 @@
 This repository is a custom Homebrew tap that ships command-line tools maintained
 by `dmoliveira`. It gives you a stable place to install and update formulas that
 are not in Homebrew core.
+
+## Support This Tap Early 💛
+
+If this tap saves you time, please support maintenance in a visible, direct way:
+
+- Stripe: [Support Homebrew Tap](https://buy.stripe.com/8x200i8bSgVe3Vl3g8bfO00)
+- GitHub Sponsors: [Sponsor @dmoliveira](https://github.com/sponsors/dmoliveira)
 
 ## Maintenance Checks 🛡️
 
