@@ -1,0 +1,37 @@
+name: Formula Audit
+
+on:
+  pull_request:
+    paths:
+      - Formula/sk.rb
+      - .github/workflows/formula-audit.yml
+  push:
+    branches:
+      - main
+    paths:
+      - Formula/sk.rb
+      - .github/workflows/formula-audit.yml
+
+jobs:
+  sk-formula:
+    runs-on: macos-latest
+    env:
+      HOMEBREW_DEVELOPER: 1
+      HOMEBREW_NO_AUTO_UPDATE: 1
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Show Homebrew version
+        run: brew --version
+
+      - name: Tap current repo
+        run: |
+          brew untap dmoliveira/tap || true
+          brew tap dmoliveira/tap "$GITHUB_WORKSPACE" --custom-remote
+
+      - name: Style check formula
+        run: brew style Formula/sk.rb
+
+      - name: Audit formula
+        run: brew audit --strict --online dmoliveira/tap/sk
