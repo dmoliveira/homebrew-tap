@@ -9,6 +9,14 @@ If this tap helps your daily workflow, support continued updates:
 - Donate now via Stripe: [Support Homebrew Tap](https://buy.stripe.com/8x200i8bSgVe3Vl3g8bfO00)
 - Sponsor on GitHub: [@dmoliveira](https://github.com/sponsors/dmoliveira)
 
+## Security Quickstart for Agents (30 seconds) ⚡
+
+- Keep API keys out of prompts, markdown, and notebook outputs.
+- Use environment-specific credentials with least privilege.
+- Rotate keys periodically and after any suspected exposure.
+- Keep CI/artifact logs redacted before sharing publicly.
+- Run `make validate` before publishing docs or formula updates.
+
 ## Quick Links
 
 - Main README: `../README.md`
