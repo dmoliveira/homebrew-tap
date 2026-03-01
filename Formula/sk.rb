@@ -1,12 +1,14 @@
 class Sk < Formula
   desc "Minimal macOS Keychain CLI for storing and retrieving secrets by key"
   homepage "https://github.com/dmoliveira/sk"
-  url "https://github.com/dmoliveira/sk/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "17684acd7d1e51165183043bb956762e84b28c9e3516dc0498a1bb5314ea0e77"
+  url "https://github.com/dmoliveira/sk/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "79d47b8a379c73655b9770298b35bcc821c9a25c6358ed3ef06006fe1c6c35e9"
   license "MIT"
 
+  depends_on "rust" => :build
+
   def install
-    bin.install "sk"
+    system "cargo", "install", *std_cargo_args(path: ".")
   end
 
   test do
