@@ -3,6 +3,7 @@ set -euo pipefail
 
 SVG_PATH="docs/assets/homebrew-tap-hero.svg"
 WEBP_PATH="docs/assets/homebrew-tap-hero.webp"
+README_PATH="README.md"
 MAX_BYTES=524288
 
 if [ ! -f "$SVG_PATH" ]; then
@@ -12,6 +13,11 @@ fi
 
 if [ ! -f "$WEBP_PATH" ]; then
 	echo "Missing WebP hero asset: $WEBP_PATH"
+	exit 1
+fi
+
+if [ ! -f "$README_PATH" ]; then
+	echo "Missing README file: $README_PATH"
 	exit 1
 fi
 
@@ -37,4 +43,22 @@ if len(data) < 12:
 if data[0:4] != b"RIFF" or data[8:12] != b"WEBP":
     raise SystemExit(f"Invalid WebP header: {path}")
 print(f"Hero asset check passed: {path}")
+PYIN
+
+python - "$README_PATH" <<'PYIN'
+import sys
+from pathlib import Path
+
+path = Path(sys.argv[1])
+text = path.read_text()
+required_fragments = [
+    '<picture>',
+    'srcset="docs/assets/homebrew-tap-hero.webp"',
+    'src="docs/assets/homebrew-tap-hero.svg"',
+    '</picture>',
+]
+missing = [fragment for fragment in required_fragments if fragment not in text]
+if missing:
+    raise SystemExit(f"README hero picture block is incomplete: {missing}")
+print(f"README hero picture block check passed: {path}")
 PYIN
