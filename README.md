@@ -8,6 +8,7 @@
 <!-- markdownlint-enable MD033 -->
 
 [![Docs Quality Checks](https://github.com/dmoliveira/homebrew-tap/actions/workflows/docs-links.yml/badge.svg)](https://github.com/dmoliveira/homebrew-tap/actions/workflows/docs-links.yml)
+[![Formula Audit](https://github.com/dmoliveira/homebrew-tap/actions/workflows/formula-audit.yml/badge.svg)](https://github.com/dmoliveira/homebrew-tap/actions/workflows/formula-audit.yml)
 [![Hero Asset Guard](https://github.com/dmoliveira/homebrew-tap/actions/workflows/asset-guard.yml/badge.svg)](https://github.com/dmoliveira/homebrew-tap/actions/workflows/asset-guard.yml)
 [![Docs Site Deploy](https://github.com/dmoliveira/homebrew-tap/actions/workflows/pages.yml/badge.svg)](https://github.com/dmoliveira/homebrew-tap/actions/workflows/pages.yml)
 [![Docs Site](https://img.shields.io/badge/docs-live_site-2ea44f)](https://dmoliveira.github.io/homebrew-tap/)
