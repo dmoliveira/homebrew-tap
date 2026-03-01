@@ -8,11 +8,31 @@ A compact operational checklist for maintainers and automation users.
 - Keep secrets out of prompts, docs, and commit messages.
 - Prefer runtime secret injection instead of static files.
 
+### Secure local shell setup
+
+```bash
+export OPENAI_API_KEY="<your-secret-key>"
+export OPENAI_IMAGE_MODEL="gpt-image-1.5"
+unset HISTFILE
+```
+
+Use a temporary shell/session and avoid saving secrets to shell profile files.
+
 ## During execution
 
 - Redact logs and traces before publishing artifacts.
 - Avoid exposing internal endpoints, tokens, or user identifiers.
 - Keep tool outputs scoped to the minimum needed context.
+
+### Secure GitHub Actions setup
+
+```yaml
+env:
+  OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+  GITHUB_TOKEN: ${{ github.token }}
+```
+
+Prefer repository secrets and avoid hardcoded credentials in workflow YAML.
 
 ## Before docs/formula release
 
