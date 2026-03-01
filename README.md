@@ -8,6 +8,7 @@
 <!-- markdownlint-enable MD033 -->
 
 [![Docs Quality Checks](https://github.com/dmoliveira/homebrew-tap/actions/workflows/docs-links.yml/badge.svg)](https://github.com/dmoliveira/homebrew-tap/actions/workflows/docs-links.yml)
+[![Nightly Validate](https://github.com/dmoliveira/homebrew-tap/actions/workflows/nightly-validate.yml/badge.svg)](https://github.com/dmoliveira/homebrew-tap/actions/workflows/nightly-validate.yml)
 [![Release Highlights Refresh](https://github.com/dmoliveira/homebrew-tap/actions/workflows/release-highlights-refresh.yml/badge.svg)](https://github.com/dmoliveira/homebrew-tap/actions/workflows/release-highlights-refresh.yml)
 [![Formula Audit](https://github.com/dmoliveira/homebrew-tap/actions/workflows/formula-audit.yml/badge.svg)](https://github.com/dmoliveira/homebrew-tap/actions/workflows/formula-audit.yml)
 [![Release Highlights Refresh](https://github.com/dmoliveira/homebrew-tap/actions/workflows/release-highlights-refresh.yml/badge.svg)](https://github.com/dmoliveira/homebrew-tap/actions/workflows/release-highlights-refresh.yml)
@@ -50,6 +51,7 @@ If this tap saves you time, please support maintenance in a visible, direct way:
 - `Generate README Hero`: manual trigger plus monthly scheduled refresh attempt.
 - Local one-command check: `make validate` (or `make ci`).
 - Full maintenance guide: `docs/maintenance.md`.
+- `Nightly Validate`: runs `make validate` every day.
 
 ## What Is In This Tap? 🧰
 
