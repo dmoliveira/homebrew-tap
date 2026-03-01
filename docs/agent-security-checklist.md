@@ -46,6 +46,16 @@ Prefer repository secrets and avoid hardcoded credentials in workflow YAML.
 - Rotate related keys and tokens in dependent systems.
 - Document remediation steps and follow-up controls.
 
+## Do / Don't quick table
+
+| Do | Don't |
+| --- | --- |
+| Use least-privilege credentials | Give broad admin scopes by default |
+| Keep secrets out of docs and prompts | Commit tokens in markdown or scripts |
+| Run `make validate` before publishing | Skip checks on docs/formula changes |
+| Redact logs before artifact upload | Upload full logs with sensitive data |
+| Rotate and revoke quickly | Delay rotation after suspected exposure |
+
 ## Copy/paste secure setup snippets
 
 ### Local shell pattern
