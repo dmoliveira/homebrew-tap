@@ -9,18 +9,18 @@ START_MARKER="<!-- sk-release-highlights:start -->"
 END_MARKER="<!-- sk-release-highlights:end -->"
 
 if ! command -v gh >/dev/null 2>&1; then
-  printf 'Error: gh CLI is required\n' >&2
-  exit 1
+	printf 'Error: gh CLI is required\n' >&2
+	exit 1
 fi
 
 if [[ ! "$COUNT" =~ ^[0-9]+$ ]] || [[ "$COUNT" -lt 1 ]]; then
-  printf 'Error: count must be a positive integer\n' >&2
-  exit 1
+	printf 'Error: count must be a positive integer\n' >&2
+	exit 1
 fi
 
 if [[ ! -f "$README_PATH" ]]; then
-  printf 'Error: README not found at %s\n' "$README_PATH" >&2
-  exit 1
+	printf 'Error: README not found at %s\n' "$README_PATH" >&2
+	exit 1
 fi
 
 python - "$SOURCE_REPO" "$COUNT" "$README_PATH" "$START_MARKER" "$END_MARKER" <<'PYCODE'
@@ -42,7 +42,16 @@ releases_raw = subprocess.check_output(
     text=True,
 )
 releases = json.loads(releases_raw)
-releases = [r for r in releases if not r.get("draft") and not r.get("prerelease")][:count]
+filtered = [r for r in releases if not r.get("draft") and not r.get("prerelease")]
+deduped = []
+seen_tags = set()
+for release in filtered:
+    tag = release.get("tag_name")
+    if not tag or tag in seen_tags:
+        continue
+    seen_tags.add(tag)
+    deduped.append(release)
+releases = deduped[:count]
 
 if not releases:
     raise SystemExit("No releases found")
