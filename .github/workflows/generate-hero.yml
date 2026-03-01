@@ -18,6 +18,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Validate required secret
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          if [ -z "${OPENAI_API_KEY}" ]; then
+            echo "::error::Missing OPENAI_API_KEY repository secret. Add it in Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+
       - name: Generate hero image
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
