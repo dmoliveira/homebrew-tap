@@ -25,3 +25,29 @@ A compact operational checklist for maintainers and automation users.
 - Revoke and replace credentials immediately.
 - Rotate related keys and tokens in dependent systems.
 - Document remediation steps and follow-up controls.
+
+## Copy/paste secure setup snippets
+
+### Local shell pattern
+
+```bash
+# Export runtime secret only for current process tree
+export OPENAI_API_KEY="$(sk get -k OPENAI_API_KEY)"
+run_your_agent_command
+unset OPENAI_API_KEY
+```
+
+### CI job pattern
+
+```yaml
+- name: Use runtime credential
+  run: |
+    export OPENAI_API_KEY="${{ secrets.OPENAI_API_KEY }}"
+    run_your_pipeline_here
+```
+
+### Pre-release safety check
+
+```bash
+make validate
+```
