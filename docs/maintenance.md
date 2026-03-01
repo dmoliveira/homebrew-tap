@@ -37,6 +37,11 @@ This document describes the recurring checks that keep this tap reliable.
   - Cadence: manual trigger and monthly scheduled attempt
   - Action on failure: ensure `OPENAI_API_KEY` exists and rerun workflow
 
+- `nightly-validate.yml`
+  - Purpose: run `make validate` on a daily schedule for drift detection
+  - Cadence: daily schedule and manual trigger
+  - Action on failure: inspect failing validation step and open a fix PR
+
 ## Local Operator Commands
 
 ```bash
