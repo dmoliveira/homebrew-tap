@@ -74,10 +74,10 @@ brew install opencode-tmux-mem
 
 ## Wiki + Docs 🌐
 
-- GitHub Wiki home: `https://github.com/dmoliveira/homebrew-tap/wiki`
-- GitHub Pages docs: `https://dmoliveira.github.io/homebrew-tap/`
-- Wiki-ready snippet: `docs/wiki-home.md`
-- sk security guide: `https://dmoliveira.github.io/sk/security-for-ai-agents`
+- GitHub Wiki home: [homebrew-tap wiki](https://github.com/dmoliveira/homebrew-tap/wiki)
+- GitHub Pages docs: [dmoliveira.github.io/homebrew-tap](https://dmoliveira.github.io/homebrew-tap/)
+- Wiki-ready snippet: [`docs/wiki-home.md`](docs/wiki-home.md)
+- sk security guide: [security-for-ai-agents](https://dmoliveira.github.io/sk/security-for-ai-agents)
 
 Generate a GPT Image 1.5 hero image (optional):
 
@@ -118,7 +118,7 @@ If this tap saves you time, support maintenance here:
 
 - **[Donate via Stripe](https://buy.stripe.com/8x200i8bSgVe3Vl3g8bfO00)**
 
-- Support details: `docs/support-the-project.md`
+- Support details: [`docs/support-the-project.md`](docs/support-the-project.md)
 - GitHub Sponsors: [Sponsor @dmoliveira](https://github.com/sponsors/dmoliveira)
 
 ## What Would Make This Page Better? ✨
