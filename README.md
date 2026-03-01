@@ -29,6 +29,7 @@ are not in Homebrew core.
 - `Docs Quality Checks`: validates Markdown links in README and docs.
 - `Hero Asset Guard`: validates hero image assets and README picture fallback block.
 - Both checks run on pull requests, pushes to `main`, and weekly schedule.
+- `Generate README Hero`: manual trigger plus monthly scheduled refresh attempt.
 
 ## What Is In This Tap? 🧰
 
