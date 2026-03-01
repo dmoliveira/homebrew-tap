@@ -41,6 +41,8 @@ jobs:
         run: brew audit --strict --online dmoliveira/tap/sk
 
       - name: Verify sk release highlights are current
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           ./scripts/update-sk-release-highlights.sh
           git diff --exit-code README.md
