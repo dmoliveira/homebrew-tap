@@ -4,72 +4,258 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Homebrew Tap Docs</title>
+    <meta name="description" content="Homebrew tap docs for formulas, maintenance workflows, and agent security guidance.">
     <style>
       :root {
         color-scheme: light;
-        --bg: #f4f8f7;
-        --card: #ffffff;
-        --text: #1b2b2a;
-        --muted: #4c6160;
+        --bg: #f2f7f6;
+        --surface: #ffffff;
+        --surface-soft: #f8fcfb;
+        --text: #0f1f1d;
+        --muted: #4f6662;
+        --line: #d8e7e3;
         --accent: #0f766e;
+        --accent-soft: #d8f1ed;
+        --accent-strong: #0b5b55;
+        --stripe: #635bff;
       }
+
+      * {
+        box-sizing: border-box;
+      }
+
       body {
         margin: 0;
-        font-family: "Avenir Next", "Segoe UI", sans-serif;
-        background: radial-gradient(circle at top right, #d7f2ee 0%, var(--bg) 45%);
+        font-family: "Avenir Next", "Segoe UI", "Inter", sans-serif;
         color: var(--text);
+        background:
+          radial-gradient(1000px 420px at 90% -10%, #bdeee6 0%, rgba(189, 238, 230, 0) 70%),
+          radial-gradient(780px 280px at -5% 20%, #dff4e2 0%, rgba(223, 244, 226, 0) 72%),
+          var(--bg);
+        line-height: 1.45;
       }
-      main {
-        max-width: 860px;
-        margin: 48px auto;
-        padding: 0 20px;
+
+      .container {
+        max-width: 1040px;
+        margin: 0 auto;
+        padding: 28px 18px 44px;
       }
+
+      .hero {
+        background: linear-gradient(145deg, #0e2c29 0%, #13413d 60%, #1c5c56 100%);
+        border-radius: 22px;
+        color: #f2fffd;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 24px 56px rgba(11, 35, 33, 0.24);
+        padding: 28px;
+      }
+
+      .hero h1 {
+        margin: 0 0 10px;
+        font-size: clamp(1.8rem, 2.5vw, 2.5rem);
+        line-height: 1.15;
+      }
+
+      .hero p {
+        margin: 0;
+        color: #c7ebe6;
+        max-width: 74ch;
+      }
+
+      .hero-actions {
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        text-decoration: none;
+        font-weight: 700;
+        border-radius: 12px;
+        padding: 10px 14px;
+        border: 1px solid transparent;
+      }
+
+      .btn-primary {
+        background: #f5fff8;
+        color: #0c4f49;
+      }
+
+      .btn-primary:hover {
+        background: #dff8f3;
+      }
+
+      .btn-ghost {
+        color: #e2faf7;
+        border-color: rgba(226, 250, 247, 0.35);
+      }
+
+      .btn-ghost:hover {
+        background: rgba(226, 250, 247, 0.1);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1.6fr 1fr;
+        gap: 16px;
+        margin-top: 16px;
+      }
+
       .card {
-        background: var(--card);
-        border: 1px solid #d9e7e5;
-        border-radius: 16px;
-        padding: 24px;
-        box-shadow: 0 8px 30px rgba(19, 42, 39, 0.08);
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 20px;
+        box-shadow: 0 10px 24px rgba(13, 45, 41, 0.06);
       }
-      h1 {
-        margin-top: 0;
-        font-size: 2rem;
+
+      .card h2 {
+        margin: 0 0 10px;
+        font-size: 1.22rem;
       }
-      p {
-        color: var(--muted);
+
+      .card h3 {
+        margin: 0 0 8px;
+        font-size: 1rem;
       }
-      ul {
+
+      .list {
+        margin: 0;
         padding-left: 18px;
       }
-      li {
+
+      .list li {
         margin: 8px 0;
+        color: var(--muted);
       }
+
       a {
-        color: var(--accent);
+        color: var(--accent-strong);
+        font-weight: 700;
         text-decoration: none;
-        font-weight: 600;
       }
+
       a:hover {
         text-decoration: underline;
       }
-      .cta {
-        margin-top: 20px;
+
+      .code {
+        margin-top: 10px;
+        background: #0e1f1d;
+        color: #d7f6ef;
+        border-radius: 12px;
+        padding: 10px 12px;
+        font-family: "SFMono-Regular", Menlo, Consolas, monospace;
+        font-size: 0.92rem;
+        overflow-x: auto;
+      }
+
+      .tag-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 12px;
+      }
+
+      .tag {
+        background: var(--accent-soft);
+        border: 1px solid #b8e3db;
+        color: #125952;
+        border-radius: 999px;
+        padding: 6px 10px;
+        font-size: 0.82rem;
+        font-weight: 700;
+      }
+
+      .support {
+        background: linear-gradient(165deg, #f3f0ff 0%, #ece9ff 100%);
+        border: 1px solid #d7d0ff;
+      }
+
+      .support p {
+        color: #3d3a60;
+      }
+
+      .btn-stripe {
+        background: var(--stripe);
+        color: #ffffff;
+      }
+
+      .btn-stripe:hover {
+        background: #5449ff;
+      }
+
+      .footer {
+        margin-top: 16px;
+        color: #5d706d;
+        font-size: 0.88rem;
+      }
+
+      @media (max-width: 860px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
       }
     </style>
   </head>
   <body>
-    <main>
-      <section class="card">
+    <main class="container">
+      <section class="hero">
         <h1>Homebrew Tap Docs</h1>
-        <p>Official docs for <code>dmoliveira/tap</code> formulas and maintenance workflows.</p>
-        <ul>
-          <li><a href="https://github.com/dmoliveira/homebrew-tap#readme">Main README</a></li>
-          <li><a href="maintenance.md">Maintenance Guide</a></li>
-          <li><a href="support-the-project.md">Support & Donations</a></li>
-          <li><a href="agent-security-faq.md">Agent Security FAQ</a></li>
-          <li><a href="wiki-home.md">Wiki Starter</a></li>
-        </ul>
-        <p class="cta"><a href="https://buy.stripe.com/8x200i8bSgVe3Vl3g8bfO00">Support this tap via Stripe</a></p>
+        <p>
+          Documentation hub for <code>dmoliveira/tap</code> formulas, maintenance workflows,
+          and AI agent safety guidance.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://github.com/dmoliveira/homebrew-tap#readme">Open README</a>
+          <a class="btn btn-ghost" href="https://github.com/dmoliveira/homebrew-tap/actions">View Workflows</a>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <h2>Quick Start</h2>
+          <p>Install the tap and your first formula:</p>
+          <div class="code">brew tap dmoliveira/tap
+brew install sk</div>
+          <div class="tag-row">
+            <span class="tag">sk</span>
+            <span class="tag">loopmux</span>
+            <span class="tag">opencode-tmux-mem</span>
+          </div>
+        </article>
+
+        <aside class="card support">
+          <h2>Support This Tap</h2>
+          <p>Help keep formulas, docs, and automations actively maintained.</p>
+          <a class="btn btn-stripe" href="https://buy.stripe.com/8x200i8bSgVe3Vl3g8bfO00">Donate via Stripe</a>
+          <p class="footer">Also available on <a href="https://github.com/sponsors/dmoliveira">GitHub Sponsors</a>.</p>
+        </aside>
+
+        <article class="card">
+          <h2>Documentation</h2>
+          <ul class="list">
+            <li><a href="maintenance.md">Maintenance Guide</a> - workflow ownership and cadence</li>
+            <li><a href="support-the-project.md">Support & Donations</a> - funding options</li>
+            <li><a href="agent-security-faq.md">Agent Security FAQ</a> - 5 quick security answers</li>
+            <li><a href="agent-security-checklist.md">Agent Security Checklist</a> - pre-run and pre-merge checks</li>
+            <li><a href="wiki-home.md">Wiki Starter</a> - paste-ready wiki content</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>Maintainer Commands</h2>
+          <h3>Local checks</h3>
+          <div class="code">make validate</div>
+          <h3 style="margin-top:12px;">Refresh release highlights</h3>
+          <div class="code">make release-highlights</div>
+          <p class="footer">See all commands with <code>make help</code>.</p>
+        </article>
       </section>
     </main>
   </body>
