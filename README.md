@@ -24,6 +24,12 @@ This repository is a custom Homebrew tap that ships command-line tools maintaine
 by `dmoliveira`. It gives you a stable place to install and update formulas that
 are not in Homebrew core.
 
+## Maintenance Checks 🛡️
+
+- `Docs Quality Checks`: validates Markdown links in README and docs.
+- `Hero Asset Guard`: validates hero image assets and README picture fallback block.
+- Both checks run on pull requests, pushes to `main`, and weekly schedule.
+
 ## What Is In This Tap? 🧰
 
 - `Formula/sk.rb`: installs `sk`
