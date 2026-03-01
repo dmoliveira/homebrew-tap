@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Homebrew Tap Docs Viewer</title>
+    <meta name="description" content="Rendered documentation viewer for Homebrew Tap markdown pages.">
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f2f7f6;
+        --surface: #ffffff;
+        --surface-soft: #f7fbfa;
+        --text: #10211f;
+        --muted: #57706c;
+        --line: #d9e8e4;
+        --accent: #0b5b55;
+        --accent-soft: #d8f1ed;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Avenir Next", "Segoe UI", "Inter", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(900px 360px at 90% -10%, #bdeee6 0%, rgba(189, 238, 230, 0) 70%),
+          radial-gradient(700px 260px at -10% 18%, #dff4e2 0%, rgba(223, 244, 226, 0) 72%),
+          var(--bg);
+      }
+
+      .layout {
+        max-width: 1120px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 270px 1fr;
+        gap: 16px;
+        padding: 20px 16px 40px;
+      }
+
+      .panel {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        box-shadow: 0 10px 22px rgba(11, 41, 38, 0.08);
+      }
+
+      .sidebar {
+        padding: 16px;
+        position: sticky;
+        top: 16px;
+        align-self: start;
+      }
+
+      .brand {
+        margin: 0 0 4px;
+        font-size: 1.08rem;
+      }
+
+      .sub {
+        margin: 0 0 14px;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      nav {
+        display: grid;
+        gap: 8px;
+      }
+
+      nav a {
+        display: block;
+        border-radius: 10px;
+        border: 1px solid var(--line);
+        background: var(--surface-soft);
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 700;
+        padding: 9px 10px;
+      }
+
+      nav a.active {
+        background: var(--accent-soft);
+        border-color: #b7e4db;
+      }
+
+      .home-link {
+        margin-top: 10px;
+      }
+
+      .content {
+        padding: 20px 24px;
+      }
+
+      .status {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .markdown h1,
+      .markdown h2,
+      .markdown h3 {
+        color: var(--text);
+        line-height: 1.2;
+      }
+
+      .markdown h1 {
+        margin-top: 0;
+      }
+
+      .markdown p,
+      .markdown li {
+        color: #203734;
+      }
+
+      .markdown a {
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 700;
+      }
+
+      .markdown a:hover {
+        text-decoration: underline;
+      }
+
+      .markdown code {
+        font-family: "SFMono-Regular", Menlo, Consolas, monospace;
+        font-size: 0.92em;
+      }
+
+      .markdown pre {
+        background: #0e1f1d;
+        color: #d7f6ef;
+        border-radius: 12px;
+        padding: 12px;
+        overflow-x: auto;
+      }
+
+      .markdown table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 14px 0;
+      }
+
+      .markdown th,
+      .markdown td {
+        border: 1px solid var(--line);
+        padding: 8px 10px;
+        text-align: left;
+      }
+
+      .markdown th {
+        background: var(--surface-soft);
+      }
+
+      @media (max-width: 920px) {
+        .layout {
+          grid-template-columns: 1fr;
+        }
+
+        .sidebar {
+          position: static;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="layout">
+      <aside class="panel sidebar">
+        <h1 class="brand">Docs Viewer</h1>
+        <p class="sub">Rendered markdown pages for GitHub Pages.</p>
+        <nav>
+          <a data-doc="maintenance.md" href="viewer.html?doc=maintenance.md">Maintenance Guide</a>
+          <a data-doc="support-the-project.md" href="viewer.html?doc=support-the-project.md">Support & Donations</a>
+          <a data-doc="agent-security-faq.md" href="viewer.html?doc=agent-security-faq.md">Agent Security FAQ</a>
+          <a data-doc="agent-security-checklist.md" href="viewer.html?doc=agent-security-checklist.md">Agent Security Checklist</a>
+          <a data-doc="wiki-home.md" href="viewer.html?doc=wiki-home.md">Wiki Starter</a>
+        </nav>
+        <p class="home-link"><a href="index.html">Back to docs home</a></p>
+      </aside>
+
+      <section class="panel content">
+        <p class="status" id="status">Loading document...</p>
+        <article class="markdown" id="markdown"></article>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+    <script>
+      const allowedDocs = new Set([
+        "maintenance.md",
+        "support-the-project.md",
+        "agent-security-faq.md",
+        "agent-security-checklist.md",
+        "wiki-home.md",
+      ]);
+
+      const params = new URLSearchParams(window.location.search);
+      const requested = params.get("doc") || "maintenance.md";
+      const doc = allowedDocs.has(requested) ? requested : "maintenance.md";
+      const statusEl = document.getElementById("status");
+      const markdownEl = document.getElementById("markdown");
+
+      document.querySelectorAll("nav a").forEach((link) => {
+        if (link.dataset.doc === doc) {
+          link.classList.add("active");
+        }
+      });
+
+      fetch(doc)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`Failed to load ${doc} (${response.status})`);
+          }
+          return response.text();
+        })
+        .then((text) => {
+          const parsed = marked.parse(text, { headerIds: false, mangle: false });
+          markdownEl.innerHTML = DOMPurify.sanitize(parsed);
+          statusEl.textContent = `Viewing: ${doc}`;
+          document.title = `Homebrew Tap Docs - ${doc}`;
+        })
+        .catch((error) => {
+          statusEl.textContent = "Could not load the selected page.";
+          markdownEl.innerHTML = `<p>${error.message}</p>`;
+        });
+    </script>
+  </body>
+</html>
