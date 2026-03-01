@@ -4,12 +4,16 @@ on:
   pull_request:
     paths:
       - Formula/sk.rb
+      - README.md
+      - scripts/update-sk-release-highlights.sh
       - .github/workflows/formula-audit.yml
   push:
     branches:
       - main
     paths:
       - Formula/sk.rb
+      - README.md
+      - scripts/update-sk-release-highlights.sh
       - .github/workflows/formula-audit.yml
 
 jobs:
@@ -35,3 +39,8 @@ jobs:
 
       - name: Audit formula
         run: brew audit --strict --online dmoliveira/tap/sk
+
+      - name: Verify sk release highlights are current
+        run: |
+          ./scripts/update-sk-release-highlights.sh
+          git diff --exit-code README.md
