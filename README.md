@@ -26,6 +26,13 @@ This repository is a custom Homebrew tap that ships command-line tools maintaine
 by `dmoliveira`. It gives you a stable place to install and update formulas that
 are not in Homebrew core.
 
+## Support This Tap Early 💛
+
+If this tap saves you time, please support maintenance in a visible, direct way:
+
+- Stripe: [Support Homebrew Tap](https://buy.stripe.com/8x200i8bSgVe3Vl3g8bfO00)
+- GitHub Sponsors: [Sponsor @dmoliveira](https://github.com/sponsors/dmoliveira)
+
 ## Maintenance Checks 🛡️
 
 - `Docs Quality Checks`: validates Markdown links in README and docs.
