@@ -24,3 +24,7 @@ record remediation steps in incident notes.
 
 Run `make validate` before merge and keep a scheduled workflow that checks
 links/content freshness and opens PRs when drift is detected.
+
+## Quick companion
+
+- Agent security checklist: `agent-security-checklist.md`
