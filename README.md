@@ -62,6 +62,15 @@ If you prefer GitHub Actions, run `Generate README Hero` from Actions with a
 repository secret named `OPENAI_API_KEY`.
 Setup path: `Settings -> Secrets and variables -> Actions -> New repository secret`.
 
+## Recent sk Release Highlights 📝
+
+- `v0.2.1`: release-helper polish and release artifact output improvements
+  - Tag: `https://github.com/dmoliveira/sk/releases/tag/v0.2.1`
+  - PR: `https://github.com/dmoliveira/sk/pull/7`
+- `v0.2.0`: Rust migration, docs refresh, Pages setup, and release automation
+  - Tag: `https://github.com/dmoliveira/sk/releases/tag/v0.2.0`
+  - PR: `https://github.com/dmoliveira/sk/pull/3`
+
 ## Support And Donations 💛
 
 - Support details: `docs/support-the-project.md`
