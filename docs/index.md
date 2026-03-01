@@ -17,6 +17,12 @@ If this tap helps your daily workflow, support continued updates:
 - Keep CI/artifact logs redacted before sharing publicly.
 - Run `make validate` before publishing docs or formula updates.
 
+## Security & Trust Links
+
+- [Agent FAQ](agent-security-faq.md)
+- [Checklist card](agent-security-checklist.md)
+- [sk security guide](https://dmoliveira.github.io/sk/security-for-ai-agents)
+
 ## Quick Links
 
 - Main README: `../README.md`
