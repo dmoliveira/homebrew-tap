@@ -19,6 +19,7 @@
 [![Stars](https://img.shields.io/github/stars/dmoliveira/homebrew-tap?style=social)](https://github.com/dmoliveira/homebrew-tap/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Support](https://img.shields.io/badge/support-open%20source%20maintenance-ff69b4)](docs/support-the-project.md)
+[![Support via Stripe](https://img.shields.io/badge/support-stripe-635bff?logo=stripe&logoColor=white)](https://buy.stripe.com/8x200i8bSgVe3Vl3g8bfO00)
 
 This repository is a custom Homebrew tap that ships command-line tools maintained
 by `dmoliveira`. It gives you a stable place to install and update formulas that
@@ -96,7 +97,7 @@ A weekly workflow also refreshes this block and opens a PR when updates are dete
 
 - Support details: `docs/support-the-project.md`
 - GitHub Sponsors: `https://github.com/sponsors/dmoliveira`
-- Stripe support link: `https://buy.stripe.com/8x200i8bSgVe3Vl3g8bfO00`
+- Donate now via Stripe: [Support Homebrew Tap](https://buy.stripe.com/8x200i8bSgVe3Vl3g8bfO00)
 
 ## What Would Make This Page Better? ✨
 
