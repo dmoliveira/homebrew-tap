@@ -23,6 +23,7 @@ If this tap helps your daily workflow, support continued updates:
 - Formula directory: `../Formula/`
 - Maintenance guide: `maintenance.md`
 - Agent security FAQ: `agent-security-faq.md`
+- Agent security checklist: `agent-security-checklist.md`
 - Wiki starter content: `wiki-home.md`
 - Support page: `support-the-project.md`
 - GitHub wiki: `https://github.com/dmoliveira/homebrew-tap/wiki`
