@@ -1,0 +1,17 @@
+{
+  "aliveStatusCodes": [200, 206, 301, 302, 307, 308, 403, 429],
+  "ignorePatterns": [
+    {
+      "pattern": "^mailto:"
+    },
+    {
+      "pattern": "^https://dmoliveira\\.github\\.io/homebrew-tap/?$"
+    },
+    {
+      "pattern": "^https://github\\.com/dmoliveira/homebrew-tap/actions/workflows/docs-links\\.yml/badge\\.svg$"
+    }
+  ],
+  "retryOn429": true,
+  "retryCount": 2,
+  "fallbackRetryDelay": "2s"
+}
