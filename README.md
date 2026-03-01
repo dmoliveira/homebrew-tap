@@ -56,6 +56,8 @@ Generate a GPT Image 1.5 hero image (optional):
 
 This writes `docs/assets/homebrew-tap-hero.webp` and keeps the SVG as fallback.
 When the WebP exists, this README automatically prefers it.
+If you prefer GitHub Actions, run `Generate README Hero` from Actions with a
+repository secret named `OPENAI_API_KEY`.
 
 ## Support And Donations 💛
 
