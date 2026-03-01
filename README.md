@@ -70,12 +70,22 @@ Setup path: `Settings -> Secrets and variables -> Actions -> New repository secr
 
 ## Recent sk Release Highlights 📝
 
-- `v0.2.1`: release-helper polish and release artifact output improvements
+Refresh this section with:
+
+```bash
+./scripts/update-sk-release-highlights.sh
+```
+
+<!-- sk-release-highlights:start -->
+
+- `v0.2.1`: sk v0.2.1 (2026-03-01)
   - Tag: `https://github.com/dmoliveira/sk/releases/tag/v0.2.1`
   - PR: `https://github.com/dmoliveira/sk/pull/7`
-- `v0.2.0`: Rust migration, docs refresh, Pages setup, and release automation
+- `v0.2.0`: v0.2.0 (2026-03-01)
   - Tag: `https://github.com/dmoliveira/sk/releases/tag/v0.2.0`
   - PR: `https://github.com/dmoliveira/sk/pull/3`
+
+<!-- sk-release-highlights:end -->
 
 ## Support And Donations 💛
 
