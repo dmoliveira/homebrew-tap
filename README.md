@@ -78,6 +78,8 @@ Refresh this section with:
 make release-highlights
 ```
 
+A weekly workflow also refreshes this block and opens a PR when updates are detected.
+
 <!-- sk-release-highlights:start -->
 
 - `v0.2.1`: sk v0.2.1 (2026-03-01)
