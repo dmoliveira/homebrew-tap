@@ -2,8 +2,10 @@
 
 ![Homebrew Tap Hero](docs/assets/homebrew-tap-hero.svg)
 
+[![Docs Quality Checks](https://github.com/dmoliveira/homebrew-tap/actions/workflows/docs-links.yml/badge.svg)](https://github.com/dmoliveira/homebrew-tap/actions/workflows/docs-links.yml)
+[![Docs Site Deploy](https://github.com/dmoliveira/homebrew-tap/actions/workflows/pages.yml/badge.svg)](https://github.com/dmoliveira/homebrew-tap/actions/workflows/pages.yml)
+[![Docs Site](https://img.shields.io/badge/docs-live_site-2ea44f)](https://dmoliveira.github.io/homebrew-tap/)
 [![Tap Repository](https://img.shields.io/badge/homebrew-tap-dmoliveira%2Ftap-fbb040)](https://github.com/dmoliveira/homebrew-tap)
-[![GitHub Pages](https://img.shields.io/badge/docs-github%20pages-2ea44f)](https://dmoliveira.github.io/homebrew-tap/)
 [![Wiki](https://img.shields.io/badge/wiki-home-1f6feb)](https://github.com/dmoliveira/homebrew-tap/wiki)
 [![Last Commit](https://img.shields.io/github/last-commit/dmoliveira/homebrew-tap)](https://github.com/dmoliveira/homebrew-tap/commits/main)
 [![Open Issues](https://img.shields.io/github/issues/dmoliveira/homebrew-tap)](https://github.com/dmoliveira/homebrew-tap/issues)
@@ -40,6 +42,14 @@ brew install opencode-tmux-mem
 - GitHub Wiki home: `https://github.com/dmoliveira/homebrew-tap/wiki`
 - GitHub Pages docs: `https://dmoliveira.github.io/homebrew-tap/`
 - Wiki-ready snippet: `docs/wiki-home.md`
+
+Generate a GPT Image 1.5 hero image (optional):
+
+```bash
+./scripts/generate-hero-gpt-image.sh
+```
+
+This writes `docs/assets/homebrew-tap-hero.webp` and keeps the SVG as fallback.
 
 ## Support And Donations 💛
 
