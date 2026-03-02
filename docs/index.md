@@ -1,73 +1,47 @@
-# Homebrew Tap Docs 🍺
+# Homebrew Tap Docs Hub 🍺
 
-Welcome to the GitHub Pages docs for `dmoliveira/tap`.
+Welcome to the docs site for `dmoliveira/tap`.
 
-## Support this tap now 💛
+[![Docs Site](https://img.shields.io/badge/docs-live-2ea44f)](https://dmoliveira.github.io/homebrew-tap/)
+[![Wiki](https://img.shields.io/badge/wiki-open-1f6feb)](https://github.com/dmoliveira/homebrew-tap/wiki)
+[![Support](https://img.shields.io/badge/support-stripe-635bff?logo=stripe&logoColor=white)](https://buy.stripe.com/8x200i8bSgVe3Vl3g8bfO00)
 
-If this tap helps your daily workflow, support continued updates:
+## Start in 60 Seconds
 
-- Donate now via Stripe: [Support Homebrew Tap](https://buy.stripe.com/8x200i8bSgVe3Vl3g8bfO00)
-- Sponsor on GitHub: [@dmoliveira](https://github.com/sponsors/dmoliveira)
+1. `brew tap dmoliveira/tap`
+2. `brew install sk`
+3. `make validate` before opening or merging PRs
 
-## Security Quickstart for Agents (30 seconds) ⚡
-
-- Keep API keys out of prompts, markdown, and notebook outputs.
-- Use environment-specific credentials with least privilege.
-- Rotate keys periodically and after any suspected exposure.
-- Keep CI/artifact logs redacted before sharing publicly.
-- Run `make validate` before publishing docs or formula updates.
-
-## Security & Trust Links
+## Security and Trust Links
 
 - [Agent FAQ](agent-security-faq.md)
 - [Checklist card](agent-security-checklist.md)
 - [sk security guide](https://dmoliveira.github.io/sk/security-for-ai-agents)
 
-## Quick Links
+## For AI/ML and Software Teams
 
-- Main README: `../README.md`
-- Formula directory: `../Formula/`
-- Maintenance guide: `maintenance.md`
-- Agent security FAQ: `agent-security-faq.md`
-- Agent security checklist: `agent-security-checklist.md`
-- Wiki starter content: `wiki-home.md`
-- Support page: `support-the-project.md`
-- GitHub wiki: `https://github.com/dmoliveira/homebrew-tap/wiki`
-- Latest releases: `https://github.com/dmoliveira/homebrew-tap/releases`
+- Keep credentials out of prompts, docs, and commit messages.
+- Use least-privilege keys for each environment.
+- Redact logs and traces before sharing artifacts.
+- Rotate and revoke tokens quickly after suspected leakage.
 
-## Install
+## Core Navigation
+
+- [Main README](../README.md)
+- [Formula directory](../Formula/)
+- [Maintenance guide](maintenance.md)
+- [Wiki starter content](wiki-home.md)
+- [Support page](support-the-project.md)
+- [Latest releases](https://github.com/dmoliveira/homebrew-tap/releases)
+
+## Maintainer Commands
 
 ```bash
-brew tap dmoliveira/tap
-brew install sk
+make release-highlights
+make validate
 ```
 
-## Formula Catalog
+## Support This Tap 💛
 
-- `sk`: macOS Keychain CLI
-- `loopmux`: terminal workflow helper
-- `opencode-tmux-mem`: tmux memory helper
-
-## Maintainer Actions
-
-- Refresh release highlights: `make release-highlights`
-- Run local checks: `make validate`
-- Trigger docs deployment: `https://github.com/dmoliveira/homebrew-tap/actions/workflows/pages.yml`
-
-## Support
-
-- Donate now via Stripe: [Support Homebrew Tap](https://buy.stripe.com/8x200i8bSgVe3Vl3g8bfO00)
-- Sponsor on GitHub: [@dmoliveira](https://github.com/sponsors/dmoliveira)
-
-## AI/ML and agent safety concepts
-
-- Principle of least privilege for API keys and service accounts
-- Secret minimization in prompts, traces, and telemetry
-- Environment isolation between dev, CI, and production
-- Fast rotation and revocation procedures for compromised tokens
-
-## Security references
-
-- sk security guide: `https://dmoliveira.github.io/sk/security-for-ai-agents`
-- OWASP LLM Top 10: `https://owasp.org/www-project-top-10-for-large-language-model-applications/`
-- NIST AI RMF: `https://www.nist.gov/itl/ai-risk-management-framework`
+- Stripe: [Support Homebrew Tap](https://buy.stripe.com/8x200i8bSgVe3Vl3g8bfO00)
+- GitHub Sponsors: [@dmoliveira](https://github.com/sponsors/dmoliveira)
