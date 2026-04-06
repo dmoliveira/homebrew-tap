@@ -1,8 +1,8 @@
 class IotUtils < Formula
   desc "Safety-first Arduino and ESP32 verify/upload helper powered by arduino-cli"
   homepage "https://github.com/dmoliveira/iot-utils"
-  url "https://github.com/dmoliveira/iot-utils/archive/refs/tags/v0.2.0.tar.gz"
-  sha256 "d917d0344420743d5930255aa3a7326fc32933bc2dc8327c5e5a99dc435ab96a"
+  url "https://github.com/dmoliveira/iot-utils/archive/refs/tags/v0.2.2.tar.gz"
+  sha256 "66598a9ec5b28454fdc417b1b3843e97288611b70443e7ce53faa8e6ea023af7"
   license "Apache-2.0"
 
   depends_on "arduino-cli"
