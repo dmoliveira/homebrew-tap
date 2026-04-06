@@ -57,6 +57,7 @@ If this tap saves you time, please support maintenance in a visible, direct way:
 - `Formula/sk.rb`: installs `sk`
 - `Formula/loopmux.rb`: installs `loopmux`
 - `Formula/opencode-tmux-mem.rb`: installs `opencode-tmux-mem`
+- `Formula/iot-utils.rb`: installs `iot-utils`
 
 ## Install 🚀
 
@@ -70,6 +71,7 @@ Install another formula:
 ```bash
 brew install loopmux
 brew install opencode-tmux-mem
+brew install iot-utils
 ```
 
 ## Wiki + Docs 🌐
